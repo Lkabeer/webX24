@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #262626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinnerX {
+    content: "";
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-top: 2px solid coral;
+    border-right: 2px solid transparent;
+    animation: spinner 0.7s linear infinite;
+}
+
+#pageX {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* width:100%; */
+}
+
+img {
+    max-width: 150px;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.cupX {
+    width: 150px;
+    height: 125px;
+    border: 6px solid #262626;
+    border-radius: 15px;
+    border-top: 2px solid transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-image: url('../assets/coffee.png');
+    background-repeat: repeat-x;
+    background-position: left 0px top 15px;
+    animation: animateX 4s ease-out;
+    box-shadow: 0 0 0 6px #fff;
+}
+
+.cupX:before {
+    content: '';
+    display: block;
+    width: 33px;
+    height: 44px;
+    border: 6px solid #fff;
+    margin-left: 156px;
+    margin-top: 25px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animateX {
+    0% {
+        background-position: left 0px top 120px;
+    }
+
+    100% {
+        background-position: left 0px top 15px; 
+    }
+}
